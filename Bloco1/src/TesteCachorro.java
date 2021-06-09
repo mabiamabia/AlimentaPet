@@ -5,7 +5,7 @@ public class TesteCachorro {
 		Scanner ler = new Scanner(System.in);
 		
 		String nome;
-		System.out.println("Digite o nome do bicho do guilherme e da hanna: ");
+		System.out.println("Digite o nome do animal de estimação: ");
 		nome = ler.next();
 		
 		Cachorro gui = new Cachorro(nome, 7, 18, "médio", "macho", "sim");
