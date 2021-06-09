@@ -24,6 +24,6 @@ Se estiver no peso ideal -> "Seu animal está no peso ideal."
 Se estiver acima -> "Seu animal está acima do peso. Controle a alimentação de acordo com o peso ideal "
 Se estiver abaixo -> "Seu animal está abaixo do peso. Controle a alimentação de acordo com o peso ideal"
 
-Indicação da quantidade diária da ração
+Indicação da quantidade diária da ração.
 
 
