@@ -25,6 +25,7 @@ public class ClassePrincipal {
 
 		public void setNome(String nome) {
 			this.nome = nome;
+			System.out.println("a");
 		}
 
 		public int getIdade() {
