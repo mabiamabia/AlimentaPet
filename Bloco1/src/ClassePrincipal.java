@@ -42,6 +42,7 @@ public class ClassePrincipal {
 
 		public void setPeso(double peso) {
 			this.peso = peso;
+			System.out.println("Hanaaa");
 		}
 
 		public String getPorte() {
