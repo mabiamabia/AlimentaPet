@@ -4,11 +4,10 @@ public class TesteCachorro {
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		
-		//Implementar escolha de cachorro ou gato usando metodo ALGUMA COISA
-		//
+		//Implementar escolha de cachorro ou gato usando metodo 
 		
 		String nome;
-		System.out.println("Digite o nome: HANNA funfouuuuuuuuuuuu caraiiii");
+		System.out.println("Digite o nome: ");
 		nome = ler.next();
 		
 		Cachorro gui = new Cachorro(nome, 7, 18, "médio", "macho", "sim");

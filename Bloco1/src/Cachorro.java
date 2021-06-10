@@ -1,31 +1,27 @@
 import java.util.Scanner;
 
 public class Cachorro extends ClassePrincipal{
-private String castrado;
 	Scanner ler = new Scanner(System.in);
-	
-	public Cachorro(String nome, int idade, double peso, String porte, String genero, String castrado) {
-		super(nome, idade, peso, porte, genero);
-		this.castrado = castrado; 
-	}
-
-	public void mostrarInfo() {
-		System.out.println("Nome do Cachorro: " + getNome());
-		System.out.println("idade: " + getIdade());
-	}
-
-	public String getCastrado() {
-		return castrado;
-	}
-
-	public void setCastrado(String castrado) {
-		this.castrado = castrado;
+	int x;
+	public Cachorro(String nome, int idade) {
+		super(nome, idade);
+		System.out.println("Qual o nome do seu pet? " + nome + "\nQual a idade do seu pet? " + idade);
+		x = ler.nextInt();
 	}
 	
-	
-	public void cadastro(double nome) {
-		System.out.println("Digite seu nome: ");
-		nome = ler.nextInt();
+	@Override
+	public void peso(double peso) {
+		//pedir peso
 	}
-	//criar método calcular quantidade de ração
+	
+	@Override
+	public void porte(String porte) {
+		//pedir porte
+	}
+	
+	@Override
+	public void genero(String genero) {
+		//pedir genero
+	}
+
 }
