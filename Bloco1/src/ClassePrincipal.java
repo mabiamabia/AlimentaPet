@@ -62,6 +62,23 @@ public class ClassePrincipal {
 			this.genero = genero;
 		}
 		
+		//metodo para perguntar se é cachorro ou gato
+		public void especieAnimal() {
+			System.out.println("Digite o número do Pet que deseja escolher: ")
+			System.out.println("1 - GATO ")
+			System.out.println("2 - CACHORRO ")
+			int op = ler.nextInt();
+				if(genero == 1 ) {
+					System.out.println("Você escolheu a opção 1 - GATO");
+			}else {
+				System.out.println("Você escolheu a opção 2 - CACHORRO");
+			}
+			
+		}
+	
+			
+
+		
 	
 
 }

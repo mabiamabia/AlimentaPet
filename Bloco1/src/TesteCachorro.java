@@ -5,7 +5,8 @@ public class TesteCachorro {
 		Scanner ler = new Scanner(System.in);
 		
 		//Implementar escolha de cachorro ou gato usando metodo
-		//
+		ClassePrincipal principal = new ClassePrincipal();
+		principal.especieAnimal();
 		
 		String nome;
 		System.out.println("Digite o nome do animal de estimação da mabiiiiia: ");

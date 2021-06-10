@@ -1,4 +1,5 @@
 
+
 public class Gato extends ClassePrincipal{
 	private String racao;
 		
@@ -16,4 +17,5 @@ public class Gato extends ClassePrincipal{
 		}
 		
 		//criar método calcular quantidade de ração
-}
+		
+		
