@@ -5,10 +5,13 @@ public class TesteCachorro {
 		Scanner ler = new Scanner(System.in);
 		
 <<<<<<< HEAD
+<<<<<<< HEAD
 		//Implementar escolha de cachorro ou gato usando metodo
 		ClassePrincipal principal = new ClassePrincipal();
 		principal.especieAnimal();
 =======
+=======
+>>>>>>> 451dea2a8ace28f6b8361889dd0645b8b38a70e4
 		//Implementar escolha de cachorro ou gato usando metodo ALGUMA COISA
 		//
 >>>>>>> 451dea2a8ace28f6b8361889dd0645b8b38a70e4
