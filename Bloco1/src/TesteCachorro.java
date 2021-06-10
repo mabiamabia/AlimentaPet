@@ -8,7 +8,7 @@ public class TesteCachorro {
 		//
 		
 		String nome;
-		System.out.println("Digite o nome do animal de estimação da mabiiiiia: ");
+		System.out.println("Digite o nome: ");
 		nome = ler.next();
 		
 		Cachorro gui = new Cachorro(nome, 7, 18, "médio", "macho", "sim");
