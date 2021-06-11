@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class Gato extends ClassePrincipal{
 	Scanner ler = new Scanner(System.in);
 	int x;
@@ -20,8 +21,18 @@ public class Gato extends ClassePrincipal{
 		//pedir porte
 	}
 	
+<<<<<<< HEAD
 	@Override
 	public void genero(String genero) {
 		//pedir genero
 	}
 }
+=======
+		public void setRacao(String racao) {
+			this.racao = racao;
+		}
+		
+		//criar método calcular quantidade de ração
+		
+		
+>>>>>>> c7ce5d7938cf7fe878fc71ae465e33b50eb07493
