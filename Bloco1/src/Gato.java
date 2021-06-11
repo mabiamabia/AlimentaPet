@@ -3,36 +3,42 @@ import java.util.Scanner;
 
 public class Gato extends ClassePrincipal{
 	Scanner ler = new Scanner(System.in);
-	int x;
+	private String cor;
 	
-	public Gato(String nome, int idade) {
+	public Gato(String nome, int idade, String cor) {
 		super(nome,idade);
-		System.out.println("Qual o nome do seu pet? " + nome + "\nQual a idade do seu pet? " + idade);
-		x = ler.nextInt();
+		this.cor = cor;
 	}
 		
 	@Override
 	public void peso(double peso) {
-		//pedir peso
+		System.out.println("O peso do gato eh: " + peso);
 	}
 	
 	@Override
 	public void porte(String porte) {
-		//pedir porte
+		System.out.println("O porte do gato eh: " + porte);
 	}
 	
-<<<<<<< HEAD
 	@Override
 	public void genero(String genero) {
-		//pedir genero
+		System.out.println("O genero do gato eh: " + genero);
+	}
+	
+	@Override
+	public void MostrarInformacoes() {
+	System.out.println("O nome do gato eh: " + getNome());
+	System.out.println("A idade do gato eh: " + getIdade());
+	System.out.println("A cor do pelo do gato eh: " + cor);
+	}
+	
+	//criar método calcular quantidade de ração
+	@Override
+	public void calcularRacao() {
+		//calcular
 	}
 }
-=======
-		public void setRacao(String racao) {
-			this.racao = racao;
-		}
-		
-		//criar método calcular quantidade de ração
 		
 		
->>>>>>> c7ce5d7938cf7fe878fc71ae465e33b50eb07493
+		
+		
