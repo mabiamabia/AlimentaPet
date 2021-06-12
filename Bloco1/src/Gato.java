@@ -1,18 +1,19 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-public class Gato extends ClassePrincipal{
+public class Gato extends Animal{
 	Scanner ler = new Scanner(System.in);
+	double peso;
+	int porte;
 	
 	private String nome;
 	private int idade;
-	private String cor;
+	private String vacinado;
 	
 	public Gato() {
 		this.nome = getNome();
 		this.idade = getIdade();
-		this.cor = getCor();
+		this.vacinado = getVacinado();
 	}
 	
 	ArrayList<String> nomes = new ArrayList<String>();
@@ -22,12 +23,13 @@ public class Gato extends ClassePrincipal{
 		nomes.add(nome);
 	}
 	
+	
 	@Override
 	public void deletar(String nome) {	
 		if(nomes.contains(nome)) {
 			nomes.remove(nome);
 		}else{
-			System.out.println("nome invalido!");
+			System.out.println("Nome inválido!");
 		}
 	}
 	
@@ -39,7 +41,7 @@ public class Gato extends ClassePrincipal{
 			nomes.remove(nome);
 			nomes.add(nome2);
 		}else{
-			System.out.println("nome não encontrado!");
+			System.out.println("Nome não encontrado!");
 		}
 	}
 	
@@ -47,25 +49,48 @@ public class Gato extends ClassePrincipal{
 	public void Mostar() {	
 		System.out.println(nomes);
 	}
-		
 	@Override
-	public void peso(double peso) {
-		System.out.println("O peso do gato eh: " + peso);
+	public void Calcular() {
+		
+		System.out.println("\tEscolha uma opção:\n 1-Pequeno\n 2-Grande");
+		porte = ler.nextInt();
+		switch(porte) {
+		case 1: 
+			System.out.println("Porte Pequeno");
+			System.out.println("gatos entre 3 a 4kg / Consumir de 40g a 55g");
+			break;
+		case 2:			
+			System.out.println("gatos entre 5 a 6kg / Consumir de 55g a 75g");
+		break;
+		default: System.out.println("Opção inválida");
+		}	
 	}
 	
 	@Override
-	public void porte(String porte) {
-		System.out.println("O porte do gato eh: " + porte);
+	public void genero(String genero) {
+		System.out.println("O genero do gato: " + genero);
+	}
+	
+	@Override
+	public void MostrarInformacoes() {
+		System.out.println("O nome do gato: " + nomes);
 	}
 	
 	public void idade(int idade) {
-		System.out.println("A idade eh: " + idade);
+		System.out.println("A idade do gato eh: " + idade);
 	}
 	
-	public void cor(String cor) {
-		System.out.println("A cor eh: " + cor);
+	public void Vacinado (String vacinado) {
+		System.out.println("O seu gato é vacinado: " + vacinado);
 	}
 	
+	public String getVacinado() {
+		return vacinado;
+	}
+
+	public void setVacinado(String vacinado) {
+		this.vacinado = vacinado;
+	}
 	
 	public String getNome() {
 		return nome;
@@ -83,31 +108,4 @@ public class Gato extends ClassePrincipal{
 		this.idade = idade;
 	}
 
-	public String getCor() {
-		return cor;
-	}
-
-	public void setCor(String cor) {
-		this.cor = cor;
-	}
-
-	@Override
-	public void genero(String genero) {
-		System.out.println("O genero do gato eh: " + genero);
-	}
-	
-	@Override
-	public void MostrarInformacoes() {
-	System.out.println("O nome do gato eh: " + nomes);
-	}
-	
-	//criar método calcular quantidade de ração
-	@Override
-	public void calcularRacao() {
-		//calcular
-	}
 }
-		
-		
-		
-		

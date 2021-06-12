@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Cachorro extends ClassePrincipal{
+public class Cachorro extends Animal{
 	Scanner ler = new Scanner(System.in);
-	
+	double peso;
+	int porte;
 	
 	private String nome;
 	private int idade;
@@ -28,7 +29,7 @@ public class Cachorro extends ClassePrincipal{
 		if(nomes.contains(nome)) {
 			nomes.remove(nome);
 		}else{
-			System.out.println("nome invalido!");
+			System.out.println("Nome inválido!");
 		}
 	}
 	
@@ -40,7 +41,7 @@ public class Cachorro extends ClassePrincipal{
 			nomes.remove(nome);
 			nomes.add(nome2);
 		}else{
-			System.out.println("nome não encontrado!");
+			System.out.println("Nome não encontrado!");
 		}
 	}
 	
@@ -48,25 +49,38 @@ public class Cachorro extends ClassePrincipal{
 	public void Mostar() {	
 		System.out.println(nomes);
 	}
-	
 	@Override
-	public void peso(double peso) {
-		System.out.println("O peso do Cachorro eh: " + peso);
-	}
-	
-	@Override
-	public void porte(String porte) {
-		System.out.println("O porte do Cachorro eh: " + porte);
+	public void Calcular() {
+		
+		System.out.println("\tEscolha uma opção:\n 1-Pequeno\n 2-Médio\n 3-Grande");
+		porte = ler.nextInt();
+		switch(porte) {
+		case 1: 
+			System.out.println("Porte Pequeno");
+			System.out.println("Cachorros entre 5 a 10kg / Consumir de 110g a 180g");
+			break;
+		case 2: 
+			System.out.println("Porte Médio");
+				System.out.println("Peso de	11 a 15 kg / Consumir 180g – 250g\r\n"
+						+ "Peso de	15 – 20 kg / Consumir 250 – 310\r\n"
+						+ "Peso de 20 – 24 kg / Consumir 310g – 360g\r\n"
+						+ "");
+			break;
+		case 3:			
+			System.out.println("Cachorros entre 25 a 40kg / Consumir de 360g a 520g");
+		break;
+		default: System.out.println("Opção inválida");
+		}	
 	}
 	
 	@Override
 	public void genero(String genero) {
-		System.out.println("O genero do Cachorro eh: " + genero);
+		System.out.println("O genero do cachorro: " + genero);
 	}
 	
 	@Override
 	public void MostrarInformacoes() {
-		System.out.println("O nome do Cachorro eh: " + nomes);
+		System.out.println("O nome do cachorro: " + nomes);
 	}
 	
 	public void idade(int idade) {
@@ -74,7 +88,7 @@ public class Cachorro extends ClassePrincipal{
 	}
 	
 	public void Vacinado (String vacinado) {
-		System.out.println("O seu cachorro eh Vacinado: " + vacinado);
+		System.out.println("O seu cachorro é vacinado: " + vacinado);
 	}
 	
 	public String getVacinado() {
@@ -101,9 +115,4 @@ public class Cachorro extends ClassePrincipal{
 		this.idade = idade;
 	}
 
-	//criar método calcular quantidade de ração
-	@Override
-	public void calcularRacao() {
-		//calcular
-	}
 }
