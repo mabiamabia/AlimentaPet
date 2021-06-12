@@ -1,13 +1,52 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Cachorro extends ClassePrincipal{
 	Scanner ler = new Scanner(System.in);
 	
+	
+	private String nome;
+	private int idade;
 	private String vacinado;
 	
-	public Cachorro(String nome, int idade, String vacinado) {
-		super(nome, idade);
-		this.vacinado = vacinado;
+	public Cachorro() {
+		this.nome = getNome();
+		this.idade = getIdade();
+		this.vacinado = getVacinado();
+	}
+	
+	ArrayList<String> nomes = new ArrayList<String>();
+	
+	@Override
+	public void adicionar(String nome) {
+		nomes.add(nome);
+	}
+	
+	
+	@Override
+	public void deletar(String nome) {	
+		if(nomes.contains(nome)) {
+			nomes.remove(nome);
+		}else{
+			System.out.println("nome invalido!");
+		}
+	}
+	
+	@Override
+	public void Alterar(String nome) {
+		if(nomes.contains(nome)) {
+			System.out.println("Digite o novo nome: ");
+			String nome2 = ler.next();
+			nomes.remove(nome);
+			nomes.add(nome2);
+		}else{
+			System.out.println("nome não encontrado!");
+		}
+	}
+	
+	@Override
+	public void Mostar() {	
+		System.out.println(nomes);
 	}
 	
 	@Override
@@ -17,7 +56,7 @@ public class Cachorro extends ClassePrincipal{
 	
 	@Override
 	public void porte(String porte) {
-		System.out.println("O porto do Cachorro eh: " + porte);
+		System.out.println("O porte do Cachorro eh: " + porte);
 	}
 	
 	@Override
@@ -27,9 +66,15 @@ public class Cachorro extends ClassePrincipal{
 	
 	@Override
 	public void MostrarInformacoes() {
-		System.out.println("O nome do Cachorro eh: " + getNome());
-		System.out.println("A idade do Cachorro eh: " + getIdade());
-		System.out.println("O seu cahorro eh vacinado ?" + vacinado);
+		System.out.println("O nome do Cachorro eh: " + nomes);
+	}
+	
+	public void idade(int idade) {
+		System.out.println("A idade do cachorro eh: " + idade);
+	}
+	
+	public void Vacinado (String vacinado) {
+		System.out.println("O seu cachorro eh Vacinado: " + vacinado);
 	}
 	
 	public String getVacinado() {
@@ -40,6 +85,22 @@ public class Cachorro extends ClassePrincipal{
 		this.vacinado = vacinado;
 	}
 	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+
 	//criar método calcular quantidade de ração
 	@Override
 	public void calcularRacao() {
