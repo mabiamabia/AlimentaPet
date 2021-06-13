@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class TesteAnimal {
@@ -11,12 +12,17 @@ public class TesteAnimal {
 		Cachorro cachorro = new Cachorro();
 		Gato gato = new Gato();
 		
+		System.out.println("Bem vindos(as) ao Alimenta Pet");
+		System.out.println("---------------------------------");
+		
 			do {
+				System.out.println("Menu:\nDigite 1 para cadastrar cachorro \nDigite 2 pra cadastar gato \n0 Para sair ");
 				
-				System.out.println("Bem vindos(as) ao Alimenta Pet");
-				System.out.println("---------------------------------");
-				System.out.println("Menu:\nDigite 1 para cadastrar cachorro:\nDigite 2 pra cadastar gato:\n0 Para sair: ");
-				op1= ler.nextInt();
+				try {
+					op1= ler.nextInt();
+				} catch (Exception e) {
+					op1 = -1;
+				}
 				
 				switch(op1) {
 					case 1:
@@ -26,8 +32,12 @@ public class TesteAnimal {
 						cachorro.adicionar(nome);
 							
 						do{
-							System.out.println("\nDeseja: \nDigite 1 para alterar nome: \nDigite 2 para mostar o nome:\nDigite 0 para sair: ");
-							op2 = ler.nextInt();
+							System.out.println("\nDeseja: \nDigite 1 para alterar nome: \nDigite 2 para mostar o nome:\nDigite 0 para continuar: ");
+							try {
+								op2= ler.nextInt();
+							} catch (Exception e) {
+								op2 = -1;
+							}
 						
 							switch(op2) {
 							case 1:
@@ -42,11 +52,11 @@ public class TesteAnimal {
 								break;
 							case 0:
 								ler.nextLine();
-								System.out.println("Saiu");
 								break;
 		
 							default:
-								System.out.println("Número inválido");
+								ler.nextLine();
+								System.out.println("\n\tOpção inválida!\n");
 								break;
 							}
 						}
@@ -55,17 +65,37 @@ public class TesteAnimal {
 					
 					
 					//String porte = ler.next();
-					System.out.println("Digite o gênero do cachorro (F para fêmea ou M para macho): ");
-					String sexo = ler.next();
-					System.out.println("Digite a idade do seu cachorro: ");
+					System.out.print("\nDigite o gênero do cachorro (1 para fêmea ou 2 para macho): ");
+					
+					int opGenero = 0;
+					String genero = "";
+					
+					
+					try {
+							opGenero = ler.nextInt();						
+						} catch (Exception e) {
+							System.out.print("\n\tOpção inválida. Digite novamente.");	
+						}
+					if (opGenero == 1) {
+						genero = "Fêmea";
+						//System.out.print("\n\tFemea ok.");
+					} else if (opGenero == 2) {
+						genero = "Macho";
+						//System.out.print("\n\tMacho ok.");
+					} else {
+						System.out.print("\n\tOpção inválida.");
+					}
+					
+					
+					System.out.print("\nDigite a idade do seu cachorro: ");
 					int idade = ler.nextInt();
-					System.out.println("O seu cachorro é vacinado? ");
+					System.out.print("\nO seu cachorro é vacinado? ");
 					String vacinado = ler.next();
 					
 					
 					cachorro.MostrarInformacoes();
 					cachorro.idade(idade);
-					cachorro.genero(sexo);
+					cachorro.mostrarGenero(genero);
 					cachorro.Vacinado(vacinado);
 					cachorro.Calcular();
 					break;
@@ -77,7 +107,7 @@ public class TesteAnimal {
 						gato.adicionar(nome1);
 						
 						do {
-							System.out.println("\nDeseja: \nDigite 1 para alterar nome: \nDigite 2 para mostar o nome:\nDigite 0 para sair: ");
+							System.out.println("\nDeseja: \nDigite 1 para alterar nome: \nDigite 2 para mostar o nome:\nDigite 0 para continuar: ");
 							op3 = ler.nextInt();
 						
 							switch(op3) {
@@ -95,11 +125,10 @@ public class TesteAnimal {
 							
 							case 0:
 								ler.nextLine();
-								System.out.println("Saiu");
 								break;
 							
 							default:
-								System.out.println("Número inválido");
+								System.out.println("\n\tOpção inválida.\n");
 								break;
 							}
 						}
@@ -107,8 +136,6 @@ public class TesteAnimal {
 						
 						System.out.println("Digite a idade do gato: ");
 						int idade1 = ler.nextInt();
-						System.out.println("Digite a cor do gato: ");
-						String cor = ler.next();
 						System.out.println("Digite o peso do gato: ");
 						double peso = ler.nextDouble();
 						//System.out.println("Digite o porte do gato: ");
@@ -121,7 +148,17 @@ public class TesteAnimal {
 	//					gato.cor(cor);
 	//					gato.peso(peso);
 	//					gato.porte(porte);
+						break;
 					
+				case 0:
+					ler.nextLine();
+					System.out.println("\n\tVocê saiu.\n");
+					break;
+
+				default:
+					ler.nextLine();
+					System.out.println("\n\tOpção inválida!\n");
+					break;
 					
 				
 				}

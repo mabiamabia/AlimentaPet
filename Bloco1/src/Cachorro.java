@@ -8,7 +8,7 @@ public class Cachorro extends Animal{
 	
 	private String nome;
 	private int idade;
-	private String vacinado;
+	private boolean vacinado;
 	
 	public Cachorro() {
 		this.nome = getNome();
@@ -74,7 +74,7 @@ public class Cachorro extends Animal{
 	}
 	
 	@Override
-	public void genero(String genero) {
+	public void mostrarGenero(String genero) {
 		System.out.println("O genero do cachorro: " + genero);
 	}
 	
@@ -91,11 +91,12 @@ public class Cachorro extends Animal{
 		System.out.println("O seu cachorro é vacinado: " + vacinado);
 	}
 	
-	public String getVacinado() {
+	public boolean getVacinado() {
+		
 		return vacinado;
 	}
 
-	public void setVacinado(String vacinado) {
+	public void setVacinado(boolean vacinado) {
 		this.vacinado = vacinado;
 	}
 	
