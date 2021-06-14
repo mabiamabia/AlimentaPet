@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Cachorro extends Animal{
 	Scanner ler = new Scanner(System.in);
+
 	double peso;
 	int porte;
 	
@@ -29,47 +30,52 @@ public class Cachorro extends Animal{
 		if(nomes.contains(nome)) {
 			nomes.remove(nome);
 		}else{
-			System.out.println("Nome inválido!");
+			System.out.println("\n\tNome inválido!");
 		}
 	}
 	
 	@Override
 	public void Alterar(String nome) {
 		if(nomes.contains(nome)) {
-			System.out.println("Digite o novo nome: ");
+			System.out.print("\nDigite o novo nome: ");
 			String nome2 = ler.next();
 			nomes.remove(nome);
 			nomes.add(nome2);
 		}else{
-			System.out.println("Nome não encontrado!");
+			System.out.println("\n\tNome não encontrado!");
 		}
 	}
 	
 	@Override
-	public void Mostar() {	
+	public void Mostrar() {	
 		System.out.println(nomes);
 	}
 	@Override
 	public void Calcular() {
 		
-		System.out.println("\tEscolha uma opção:\n 1-Pequeno\n 2-Médio\n 3-Grande");
+		System.out.println("\nQual é o porte do cachorro?\n 1)Pequeno\n 2)Médio\n 3)Grande");
+		System.out.print("\n\t> ");
 		porte = ler.nextInt();
 		switch(porte) {
 		case 1: 
-			System.out.println("Porte Pequeno");
-			System.out.println("Cachorros entre 5 a 10kg / Consumir de 110g a 180g");
+			System.out.println("\n\tPorte Pequeno");
+			System.out.println("\tCachorros entre 5 a 10kg > Consumir de 110g a 180g");
+			System.out.println("\nATENÇÃO: Se o seu pet está fora destas faixas de peso, consulte um veterinário");
 			break;
 		case 2: 
-			System.out.println("Porte Médio");
-				System.out.println("Peso de	11 a 15 kg / Consumir 180g – 250g\r\n"
-						+ "Peso de	15 – 20 kg / Consumir 250 – 310\r\n"
-						+ "Peso de 20 – 24 kg / Consumir 310g – 360g\r\n"
+			System.out.println("\n\tPorte Médio");
+				System.out.println("\tPeso de	11 a 15 kg > Consumir 180g – 250g\r\n\t"
+						+ "Peso de	15 a 20 kg > Consumir 250 a 310\r\n\t"
+						+ "Peso de 20 a 24 kg > Consumir 310g a 360g\r\n"
 						+ "");
+				System.out.println("\nATENÇÃO: Se o seu pet está fora destas faixas de peso, consulte um veterinário");
 			break;
-		case 3:			
-			System.out.println("Cachorros entre 25 a 40kg / Consumir de 360g a 520g");
+		case 3:
+			System.out.println("\n\tPorte Grande");
+			System.out.println("\tCachorros entre 25 a 40kg > Consumir de 360g a 520g");
+			System.out.println("\nATENÇÃO: Se o seu pet está fora destas faixas de peso, consulte um veterinário");
 		break;
-		default: System.out.println("Opção inválida");
+		default: System.out.println("\n\tOpção inválida");
 		}	
 	}
 	
@@ -84,7 +90,7 @@ public class Cachorro extends Animal{
 	}
 	
 	public void idade(int idade) {
-		System.out.println("A idade do cachorro eh: " + idade);
+		System.out.println("A idade do cachorro é: " + idade);
 	}
 	
 	public void Vacinado (String vacinado) {

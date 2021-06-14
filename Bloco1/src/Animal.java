@@ -14,7 +14,7 @@ public abstract class Animal {
 		abstract public void adicionar(String nome);
 		abstract public void deletar(String nome);
 		abstract public void Alterar(String nome);
-		abstract public void Mostar();
+		abstract public void Mostrar();
 		
 		//Metodo para Calcular o peso;
 		abstract public void Calcular();
