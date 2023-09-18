@@ -119,12 +119,11 @@ public class Menu {
                             } else if (conta instanceof ContaPoupanca contaPoupanca) {
                                 System.out.println("BEM VINDO:  " + contaPoupanca.getTitular().getNome());
 
-                                boolean sairCC = false;
                                 boolean sairCP = false;
                                 while (!sairCP) {
                                     System.out.println("Escolha uma opção para a Conta Poupança:");
                                     System.out.println("1 - Consultar Saldo");
-                                    System.out.println("2 - Aplicar 1%");
+                                    System.out.println("2 - Aplicar ");
                                     System.out.println("3 - Resgatar Valor Aplicado");
                                     System.out.println("4 - Encerrar Conta");
                                     System.out.println("5 - Voltar");
@@ -137,7 +136,7 @@ public class Menu {
                                             break;
                                         case 2:
                                             contaPoupanca.aplicar();
-                                            System.out.println("1% aplicado na Conta Poupança. Novo saldo: R$ " + contaPoupanca.getSaldo());
+                                            System.out.println("Rendimento aplicado na Conta Poupança. Novo saldo: R$ " + contaPoupanca.getSaldo());
                                             break;
                                         case 3:
                                             // Resgatar Valor Aplicado
