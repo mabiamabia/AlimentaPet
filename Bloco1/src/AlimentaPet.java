@@ -100,7 +100,7 @@ public class AlimentaPet {
 				cachorro.Vacinado(vacinado);
 				cachorro.Calcular();
 				break;
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			case 2:
 				ler.nextLine();
 				System.out.println("---------------------------------");
