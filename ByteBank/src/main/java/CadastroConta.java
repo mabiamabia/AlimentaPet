@@ -30,5 +30,9 @@ public class CadastroConta {
         Conta novaConta = tipoConta == 1 ? new ContaCorrente(agencia, senha, conta, pessoa, chavePix) : new ContaPoupanca(agencia, conta, senha, pessoa);
         contas.add(novaConta);
         System.out.println("Cliente" + "\nCadastrado com sucesso na agência  "+ agencia + "conta" + conta);
+
+
+
+        //método de encerrar conta
     }
 }
